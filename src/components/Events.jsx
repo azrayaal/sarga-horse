@@ -102,11 +102,11 @@ export default function Events() {
 
   return (
     <section id="events" ref={ref} className="relative overflow-hidden bg-ink-900 text-sand py-24 sm:py-32">
-      {/* <img src="/assets/motif9.png" alt="" className='absolute z-10 top-[-100px] right-[-200px] h-[700px]' /> */}
-       <img src="/assets/motif4.png" alt="" className='absolute z-10 bottom-[-0] left-[-0] h-[100px]' />
-       <img src="/assets/motif6.png" alt="" className='absolute z-10 top-[-0] left-[-0] h-[100px]' />
-       <img src="/assets/motif5.png" alt="" className='absolute z-10 top-[-0] right-[-0] h-[100px]' />
-       <img src="/assets/motif3.png" alt="" className='absolute z-10 bottom-[-0] right-[-0] h-[100px]' />
+      {/* <img src="/assets/motif9.png" alt="" className='absolute z-0 top-[-100px] right-[-200px] h-[700px]' /> */}
+       <img src="/assets/motif4.png" alt="" className='absolute z-0 bottom-[-0] left-[-0] h-[100px] hidden md:block' />
+       <img src="/assets/motif6.png" alt="" className='absolute z-0 top-[-0] left-[-0] h-[100px] hidden md:block' />
+       <img src="/assets/motif5.png" alt="" className='absolute z-0 top-[-0] right-[-0] h-[100px] hidden md:block' />
+       <img src="/assets/motif3.png" alt="" className='absolute z-0 bottom-[-0] right-[-0] h-[100px] hidden md:block' />
       <div className="container-x relative">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>

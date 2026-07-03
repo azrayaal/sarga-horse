@@ -20,7 +20,7 @@ export default function About() {
 
   return (
     <section id="about" ref={ref} className="relative overflow-hidden bg-sand py-24 sm:py-32">
-      <img src="/assets/motif8.png" alt="" className='absolute z-10 top-[-55px] left-[-170px] h-[1000px]' />
+      <img src="/assets/motif8.png" alt="" className='absolute z-0 top-[-55px] left-[-170px] h-[1000px] hidden md:block' />
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         {/* image cluster — arched frame, not boxy */}
         <div

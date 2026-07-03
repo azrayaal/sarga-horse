@@ -21,8 +21,8 @@ export default function Stats() {
   const [ref, inView] = useInView({ threshold: 0.4 })
   return (
     <section ref={ref} className="relative overflow-hidden bg-sage py-20 sm:py-28">
-       <img src="/assets/motif5.png" alt="" className='absolute z-10 top-[-0] right-[-0] h-[100px]' />
-        <img src="/assets/motif4.png" alt="" className='absolute z-10 bottom-[-0] left-[-0] h-[100px]' />
+       <img src="/assets/motif5.png" alt="" className='absolute z-0 top-[-0] right-[-0] h-[100px] hidden md:block' />
+        <img src="/assets/motif4.png" alt="" className='absolute z-0 bottom-[-0] left-[-0] h-[100px] hidden md:block' />
       <div className="container-x relative">
         <div className="grid grid-cols-2 gap-y-12 gap-x-6 rounded-[2rem] bg-ink-900 py-12 shadow-[0_30px_60px_-20px_rgba(1,1,1,0.5)] md:grid-cols-4 md:divide-x md:divide-white/[0.08]">
           {STATS.map((s) => (
