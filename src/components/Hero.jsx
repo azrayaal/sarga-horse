@@ -32,11 +32,11 @@ export default function Hero() {
             className="mt-6 font-heading text-white font-800 leading-[0.92] tracking-tight text-[clamp(2.9rem,8vw,6.5rem)] animate-fade-up"
             style={{ animationDelay: '0.08s' }}
           >
-            Di Mana
+            Race
             <br />
-            Kecepatan
+            to the  
             <br />
-            Bertemu <span className="text-gradient">Warisan</span>
+            <span className="text-gradient">WORLD</span>{" "}stage
           </h1>
 
           <p

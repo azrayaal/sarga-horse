@@ -19,7 +19,8 @@ export default function About() {
   const [ref, inView] = useInView()
 
   return (
-    <section id="about" ref={ref} className="relative overflow-hidden bg-sand py-24 sm:py-32 bg-[url('/assets/bg/bg_about.png')] bg-cover bg-center bg-no-repeat">
+    <section id="about" ref={ref} className="relative overflow-hidden bg-sand py-24 sm:py-32">
+      <img src="/assets/motif8.png" alt="" className='absolute z-10 top-[-120px] left-[-300px] w-[700px]' />
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         {/* image cluster — arched frame, not boxy */}
         <div

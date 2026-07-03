@@ -12,6 +12,7 @@ export default function News() {
   ref={ref}
   className="relative overflow-hidden bg-sand text-ink py-24 sm:py-32 bg-[url('/assets/bg/bg_news.png')] bg-cover bg-center bg-no-repeat"
 >
+   <img src="/assets/motif8.png" alt="" className='absolute z-10 top-[-85px] right-[-300px] w-[700px]' />
       <div className="container-x relative">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>

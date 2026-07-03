@@ -7,7 +7,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" ref={ref} className="relative overflow-hidden bg-brown-700 text-sand py-24 sm:py-32">
-      <div className="container-x relative">
+      <div className="container-x relative border border-collapse border-ink/10 bg-ink-900/5 p-8 sm:p-12 lg:p-16 rounded-t-[5rem]">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center text-orange">
             <Sparkle className="w-4 h-4 text-orange" />
