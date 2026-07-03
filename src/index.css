@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Brand fonts — STADMITTE (display) & Masifa (body).
+   Drop the real files into /public/fonts to activate them:
+     public/fonts/StadtMitte.woff2  (or .ttf/.otf)
+     public/fonts/Masifa.woff2      (or .ttf/.otf)
+   Until then, the stacks fall back to Oswald / Archivo.
+   ============================================================ */
+@font-face {
+  font-family: 'StadtMitte';
+  src: url('/fonts/StadtMitte.woff2') format('woff2'),
+       url('/fonts/StadtMitte.woff') format('woff'),
+       url('/fonts/StadtMitte.ttf') format('truetype'),
+       url('/fonts/StadtMitte.otf') format('opentype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Masifa';
+  src: url('/fonts/Masifa.woff2') format('woff2'),
+       url('/fonts/Masifa.woff') format('woff'),
+       url('/fonts/Masifa.ttf') format('truetype'),
+       url('/fonts/Masifa.otf') format('opentype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-sand text-ink font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Condensed display headings echo the STADMITTE / sport look */
+  h1, h2, h3, .font-display, .font-heading {
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: #FF6B00;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1240px] px-6 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-[0.7rem] font-semibold uppercase tracking-widest2 text-red;
+  }
+  /* single solid accent colour (no gradient on text) */
+  .text-gradient {
+    @apply text-red;
+  }
+  .text-accent {
+    @apply text-red;
+  }
+  /* sporty forward slant for display titles */
+  .italic-sport {
+    font-style: italic;
+  }
+  .btn-flame {
+  @apply inline-flex items-center justify-center gap-2 rounded-full
+         px-7 py-3.5 text-sm font-semibold text-white
+         shadow-[0_10px_30px_-8px_rgba(237,28,36,0.55)]
+         transition-all duration-300
+         hover:shadow-[0_16px_40px_-8px_rgba(237,28,36,0.7)]
+         hover:-translate-y-0.5 active:translate-y-0;
+
+  background-color: #FF6B00;
+}
+  /* ghost button on DARK surfaces */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-sand
+           transition-all duration-300 hover:border-orange/60 hover:bg-white/[0.05];
+  }
+  /* ghost button on LIGHT surfaces */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink
+           transition-all duration-300 hover:border-red/60 hover:bg-ink/[0.04];
+  }
+}
+
+/* thin custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #010101;
+}
+::-webkit-scrollbar-thumb {
+  background: #763627;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B00;
+}
+
+/* subtle film grain overlay */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
